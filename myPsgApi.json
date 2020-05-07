@@ -1,0 +1,198 @@
+{
+   "name":"Paris Saint Germain",
+   "shortName":"PSG",
+   "website":"https://www.psg.fr",
+   "founded":1970,
+   "clubColors":"Blue / White / Red",
+   "squad":[
+      {
+         "name":"Neymar da Silva Santos",
+         "number":10,
+         "age":28,
+         "position":"Attaquant",
+         "dateOfBirth":"5/02/1992",
+         "nationality":"Brésilien",
+         "url":"https://www.sofoot.com/IMG/joueurs/neymar-62381.jpg"
+      },
+      {
+         "name":"Kylian Mbappé",
+         "number":7,
+         "age":21,
+         "position":"Attaquant",
+         "dateOfBirth":"20/12/1998",
+         "nationality":"Français",
+         "url":"https://le10static.com/img/cache/article/576x324/0000/0016/160528.jpeg"
+      },
+      {
+         "name":"Edinson Roberto Cavani Gómez",
+         "number":9,
+         "age":33,
+         "position":"Attaquant",
+         "dateOfBirth":"14/02/1987",
+         "nationality":"Uruguayen",
+         "url":"https://icdn.football-espana.net/wp-content/uploads/2020/03/cavani-epa24032020.jpg"
+      },
+      {
+         "name":"Mauro Icardi",
+         "number":18,
+         "age":27,
+         "position":"Attaquant",
+         "dateOfBirth":"19/02/1993",
+         "nationality":"Argentin",
+         "url":"https://le10static.com/img/cache/article/576x324/0000/0016/165101.jpeg"
+      },
+      {
+         "name":"Ángel Di María",
+         "number":11,
+         "age":32,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"14/02/1988",
+         "nationality":"Argentin",
+         "url":"https://static.onzemondial.com/photo_article/205293/97594/1200-L-ligue-1.jpg"
+      },
+      {
+         "name":"Keylor Navas",
+         "number":1,
+         "age":33,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"14/02/1987",
+         "nationality":"Costaricien",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/keylor-navas-paris-saint-germain-1570778206-26465.jpg"
+      },
+      {
+         "name":"Thiago Emiliano da Silva",
+         "number":2,
+         "age":35,
+         "position":"Défenseur",
+         "dateOfBirth":"22/08/1984",
+         "nationality":"Brésilien",
+         "url":"https://i.eurosport.com/2019/09/29/2686244-55547197-1600-900.jpg"
+      },
+      {
+         "name":"Tanguy Kouassi",
+         "number":33,
+         "age":17,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"07/06/2002",
+         "nationality":"Français",
+         "url":"https://cdn.foot-sur7.fr/768x512/articles/2019/12/Tanguy%20Kouassi%20Icon_ADIM_071219_35_203.jpg"
+      },
+      {
+         "name":"Marco Verratti",
+         "number":6,
+         "age":27,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"05/11/92",
+         "nationality":"Italien",
+         "url":"https://le10static.com/img/master/0000/0016/160726.jpeg"
+      },
+      {
+         "name":"Pablo Sarabia",
+         "number":19,
+         "age":27,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"11/05/92",
+         "nationality":"Espagnol",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/pablo-sarabia-psg-1570349980-26321.jpg"
+      },
+      {
+         "name":"Marquinhos",
+         "number":5,
+         "age":25,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"14/05/94",
+         "nationality":"Brésilien",
+         "url":"https://img.20mn.fr/Ckau5iltTdmTd-GOM3SMbQ/830x532_marquinhos-dortmund-18-fevrier-2020.jpg"
+      },
+      {
+         "name":"Leandro Paredes",
+         "number":8,
+         "age":25,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"29/06/94",
+         "nationality":"Argentin",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/leandro-paredes-psg-1579702324-30253.jpg"
+      },
+      {
+         "name":"Idrissa Gueye",
+         "number":27,
+         "age":30,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"26/09/89",
+         "nationality":"Sénégalais",
+         "url":"https://cdn-media.rtl.fr/online/image/2019/0919/7798353423_idrissa-gueye-avec-le-psg-le-18-septembre-2019.jpg"
+      },
+      {
+         "name":"Ander Herrera",
+         "number":21,
+         "age":30,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"14/08/89",
+         "nationality":"Espagnol",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/ander-herrera-im-trikot-von-psg-1576759824-28734.jpg"
+      },
+      {
+         "name":"Juan Bernat",
+         "number":14,
+         "age":27,
+         "position":"Défenseur",
+         "dateOfBirth":"01/03/93",
+         "nationality":"Espagnol",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/juan-bernat-paris-saint-germain-1569315803-25983.jpg"
+      },
+      {
+         "name":"Layvin Kurzawa",
+         "number":20,
+         "age":27,
+         "position":"Défenseur",
+         "dateOfBirth":"04/09/92",
+         "nationality":"Français",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/layvin-kurzawa-psg-1579204383-29957.jpg"
+      },
+      {
+         "name":"Julian Draxler",
+         "number":23,
+         "age":24,
+         "position":"Milieu de terrain",
+         "dateOfBirth":"20/09/93",
+         "nationality":"Allemand",
+         "url":"https://paris-supporters.fr/wp-content/uploads/2019/01/julian-draxler-psg_1e7fwuztku48h10xgwd3cv9q07-1.jpg"
+      },
+      {
+         "name":"Presnel Kimpembe",
+         "number":3,
+         "age":24,
+         "position":"Defenseur",
+         "dateOfBirth":"13/08/95",
+         "nationality":"Français",
+         "url":"https://img.bfmtv.com/c/1256/708/2e8/5b600d6aa514a7f106315396ec9a6.jpeg"
+      },
+      {
+         "name":"Thilo Kehrer",
+         "number":4,
+         "age":23,
+         "position":"Defenseur",
+         "dateOfBirth":"21/09/96",
+         "nationality":"Allemand",
+         "url":"https://le10static.com/img/cache/article/576x324/0000/0013/137238.jpeg"
+      },
+      {
+         "name":"Thomas Meunier",
+         "number":12,
+         "age":28,
+         "position":"Defenseur",
+         "dateOfBirth":"12/09/91",
+         "nationality":"Belge",
+         "url":"https://www.sofoot.com/IMG/joueurs/thomas-meunier-129118.jpg"
+      },
+      {
+         "name":"Abdou Diallo",
+         "number":22,
+         "age":24,
+         "position":"Defenseur",
+         "dateOfBirth":"04/05/96",
+         "nationality":"Français",
+         "url":"https://tmssl.akamaized.net/images/foto/normal/abdou-diallo-psg-1569229239-25956.jpg"
+      }
+   ]
+}
