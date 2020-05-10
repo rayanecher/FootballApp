@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        showList();
+
         makeApiCall();
     }
 
-    private void showList() {
+    private void showList(List<psgTeam> psgTeamList) {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
@@ -44,13 +44,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
-        List<String> input = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            input.add("Test" + i);
-        }
-
-        // define an adapter
-        mAdapter = new ListAdapter(input);
+        mAdapter = new ListAdapter(psgTeamList);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -76,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<RestFootballResponse> call, Response<RestFootballResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<psgTeam> psgTeamList = response.body().getSquad();
-                    Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
+                    showList(psgTeamList);
                 } else {
                     showError();
 
