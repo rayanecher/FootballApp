@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private SharedPreferences sharedPreferences;
+    private Gson gson;
 
 
     @Override
@@ -32,9 +38,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPreferences = getSharedPreferences("application_esiea", Context.MODE_PRIVATE);
+        gson = new GsonBuilder()
+                .setLenient()
+                .create();
 
-        makeApiCall();
+        List<psgTeam> psgTeamList = getDataFromCache();
+        if (psgTeamList != null) {
+            showList(psgTeamList);
+        } else {
+            makeApiCall();
+        }
     }
+    private List<psgTeam> getDataFromCache() {
+        String jsonpsgTeamList = sharedPreferences.getString( Constants.KEY_psgTEAM_LIST, null);
+
+        if (jsonpsgTeamList == null) {
+            return null;
+        } else {
+            Type listType = new TypeToken<List<psgTeam>>() {
+            }.getType();
+            return gson.fromJson(jsonpsgTeamList, listType);
+        }
+    }
+
 
     private void showList(List<psgTeam> psgTeamList) {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -53,10 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void makeApiCall(){
 
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
@@ -70,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<RestFootballResponse> call, Response<RestFootballResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<psgTeam> psgTeamList = response.body().getSquad();
+                    saveList(psgTeamList);
                     showList(psgTeamList);
                 } else {
                     showError();
@@ -83,9 +107,21 @@ public class MainActivity extends AppCompatActivity {
                 }
         });
     }
+
+    private void saveList(List<psgTeam> psgTeamList) {
+        String jsonString = gson.toJson(psgTeamList);
+
+        sharedPreferences
+                .edit()
+                .putString(Constants.KEY_psgTEAM_LIST , jsonString)
+                .apply();
+
+    }
+
     public void showError(){
         Toast.makeText(getApplicationContext(), "API ERROR", Toast.LENGTH_SHORT).show();
 
 
     }
 }
+
