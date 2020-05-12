@@ -99,6 +99,8 @@ public class MainController {
 
     public void onItemClick(psgTeam psgTeam){
 
+        view.navigateToDetails(psgTeam);
+
 
         }
         public void onButton1ACLICK() {
