@@ -1,8 +1,9 @@
-package com.example.footballapp;
+package com.example.footballapp.data;
+
+import com.example.footballapp.presentation.model.RestFootballResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public interface  PsgApi {
 

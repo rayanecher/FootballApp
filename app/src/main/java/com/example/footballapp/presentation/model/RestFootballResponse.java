@@ -1,4 +1,4 @@
-package com.example.footballapp;
+package com.example.footballapp.presentation.model;
 
 import java.util.List;
 

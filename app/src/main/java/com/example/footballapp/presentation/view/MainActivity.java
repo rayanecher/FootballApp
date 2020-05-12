@@ -1,4 +1,4 @@
-package com.example.footballapp;
+package com.example.footballapp.presentation.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,12 +9,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.footballapp.Constants;
+import com.example.footballapp.R;
+import com.example.footballapp.data.PsgApi;
+import com.example.footballapp.presentation.model.RestFootballResponse;
+import com.example.footballapp.presentation.model.psgTeam;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             showList(psgTeamList);
         } else {
             makeApiCall();
+
         }
     }
     private List<psgTeam> getDataFromCache() {
