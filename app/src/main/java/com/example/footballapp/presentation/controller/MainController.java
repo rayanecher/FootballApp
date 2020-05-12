@@ -103,14 +103,6 @@ public class MainController {
 
 
         }
-        public void onButton1ACLICK() {
-
-
-        }
-        public void onButton1BCLICK(){
-
-
-        }
 
 
 }
