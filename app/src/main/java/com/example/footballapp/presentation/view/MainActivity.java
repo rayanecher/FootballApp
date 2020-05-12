@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private MainController controller;
+
 
 
     @Override
@@ -65,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToDetails(psgTeam psgTeam) {
-        Toast.makeText(getApplicationContext(), "TODO NAVIGATE", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(MainActivity.this, DetailActivity.class);
+       myIntent.putExtra("psgTeamKey", Singletons.getGson().toJson(psgTeam));
+
+     MainActivity.this.startActivity(myIntent);
 
     }
 }

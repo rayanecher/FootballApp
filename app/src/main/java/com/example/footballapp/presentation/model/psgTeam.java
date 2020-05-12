@@ -4,7 +4,7 @@ public class psgTeam {
 
 private String name;
 private Integer number;
-private Integer age;
+private String age;
 private String position;
 private String dateOfBirth;
 private String nationality;
@@ -18,7 +18,7 @@ private String url;
         return number;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
