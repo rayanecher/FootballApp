@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.footballapp.Constants;
 import com.example.footballapp.R;
+import com.example.footballapp.Singletons;
 import com.example.footballapp.data.PsgApi;
 import com.example.footballapp.presentation.controller.MainController;
 import com.example.footballapp.presentation.model.RestFootballResponse;
@@ -44,10 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(
                 this,
-               new GsonBuilder()
-                        .setLenient()
-                        .create(),
-                getSharedPreferences("application_esiea", Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getSharedPreferences((getApplicationContext()))
 
 
         );

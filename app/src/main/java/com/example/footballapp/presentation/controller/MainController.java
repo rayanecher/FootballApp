@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.footballapp.Constants;
+import com.example.footballapp.Singletons;
 import com.example.footballapp.data.PsgApi;
 import com.example.footballapp.presentation.model.RestFootballResponse;
 import com.example.footballapp.presentation.model.psgTeam;
@@ -51,15 +52,7 @@ public class MainController {
 
 
     public void makeApiCall(){
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        PsgApi psgApi = retrofit.create(PsgApi.class);
-
-        Call<RestFootballResponse> call = psgApi.getFootballResponse();
+        Call<RestFootballResponse> call = Singletons.getPsgApi().getFootballResponse();
         call.enqueue(new Callback<RestFootballResponse>() {
             @Override
             public void onResponse(Call<RestFootballResponse> call, Response<RestFootballResponse> response) {
