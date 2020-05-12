@@ -1,9 +1,4 @@
 {
-   "name":"Paris Saint Germain",
-   "shortName":"PSG",
-   "website":"https://www.psg.fr",
-   "founded":1970,
-   "clubColors":"Blue / White / Red",
    "squad":[
       {
          "name":"Neymar da Silva Santos",
