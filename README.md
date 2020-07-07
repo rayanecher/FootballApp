@@ -5,7 +5,7 @@
 
 Simple projet démontrant l'utilisation d'une application android codé en Java.
 
-Cette application affiche la liste de l'effectif du jeu PSG et utilise l'API de Github permettant d'aller chercher un fichier sur le repo d'un utilisateur Github.
+Cette application affiche la liste de l'effectif du PSG et utilise l'API de Github permettant d'aller chercher un fichier sur le repo d'un utilisateur Github.
 
 ## Prérequis
 
